@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的音乐播放器</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/Mycss.css" type="text/css">
+    <!--<link rel="stylesheet" href="css/阿里图标/iconfont.css" type="text/css">-->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_448544_98aeh1spi6pc766r.css" type="text/css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body onselectstart="return false">
+<div id="box">
+    <!--header-->
+    <div id="header" class="clearfix">
+        <div class="h-left fl">
+            <h1>我的音乐盒<i class="iconfont icon-yinle-copy fontsize"></i></h1>
+        </div>
+        <div class="h-right fr">
+            <input type="text" class="text" name="search" placeholder="请输入歌名或歌手">
+            <!--<i class="iconfont icon-sousuo">-->
+            <img src="images/sousuo.png" class="search"></img>
+        </div>
+    </div>
+    <!--contain-->
+    <div id="contain">
+        <div class="wrap clearfix">
+            <div class="w-left fl">
+                <ul class="classList">
+                    <li numb="3">欧美</li>
+                    <li numb="4">流行榜</li>
+                    <li numb="5" class="on">内地</li>
+                    <li numb="6">港台</li>
+                    <li numb="16">韩国</li>
+                    <li numb="17">日本</li>
+                    <li numb="26">热歌</li>
+                    <li numb="27">新歌</li>
+                    <li numb="28">网络歌曲</li>
+                    <li numb="32">音乐人</li>
+                    <li numb="36">K歌金曲</li>
+                </ul>
+            </div>
+            <div class="w-center fl">
+                <div class="w-c-top">
+                    <div class="t-img">
+                        <div class="mr">
+                            <img id="showImg" src="http://i.gtimg.cn/music/photo/mid_album_300/O/5/002BNigT442pO5.jpg" alt="歌曲配图">
+                        </div>
+                    </div>
+                    <p id="songname" class="t-center"></p>
+                    <p id="singer" class="t-center"></p>
+                    <h3 class="title">内地排行榜</h3>
+                </div>
+                <div class="w-c-bottom">
+                    <ul class="musicList">
+                    </ul>
+                </div>
+            </div>
+            <div class="w-right fr">
+                <div id="lyric" class="w-r-card">
+                    <ul></ul>
+                </div>
+                <div class="w-r-bg"></div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div id="footer" class="clearfix">
+        <div class="f-left fl">
+            <i id="prev" class="prev iconfont icon-shangxiazuoyou- f-fontsize"></i>
+            <i id="play" class="stop iconfont icon-zanting1 f-fontsize"></i>
+            <i id="next" class="next iconfont icon-shangxiazuoyou-1 f-fontsize"></i>
+        </div>
+        <div class="f-center fl">
+            <span id="startTime" class="c-left fl">00:00</span>
+            <div  class="bar fl bv">
+                <span class="v-span"></span>
+                <div class="b-ing bv-ing">
+                    <div class="dot t-dot"></div>
+                </div>
+            </div>
+            <span id="endTime" class="c-right">05:00</span>
+        </div>
+        <div class="f-right fr">
+            <i  id="volume" class="iconfont icon-yinliang fr-fontsize"></i>
+            <div class="vol fr bv">
+                <span class="v-span"></span>
+                <div class="v-ing bv-ing">
+                    <div class="dot v-dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="audio" src=""></audio>
+</div>
+<script src="js/Myjs.js" type="text/javascript"></script>
+</body>
+</html>

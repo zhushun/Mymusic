@@ -1,0 +1,315 @@
+#box{
+    width:1100px;
+    margin:0 auto;
+    background: #ff1a24;
+
+}
+#header{
+    width:1000px;
+    margin:0 auto;
+    /*background: skyblue;*/
+}
+.h-left{
+    width:250px;
+    padding-bottom:5px;
+    text-align: center;
+    color: #fff;
+}
+.h-left .fontsize{
+    font-size:30px;
+    margin-left: 15px;
+}
+#header .h-right{
+    width:400px;
+    height:47px;
+    line-height:47px;
+    /*background: #ff191f;*/
+}
+.h-right .text{
+    width:340px;
+    height:40px;
+    border:none;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    font-size:20px;
+    text-indent: 1em;
+    outline:medium;
+}
+.h-right img{
+    vertical-align: top;
+    width:47px;
+    height:47px;
+    margin:0 3px;
+    cursor: pointer;
+}
+
+/*中间显示部分*/
+#contain{
+    width:100%;
+    height:565px;
+    background:url("../images/beijing9.jpg") no-repeat center center;
+    background-size: cover;
+    /*background: #fff;*/
+}
+.wrap{
+    width:100%;
+    height:100%;
+}
+.wrap .w-left{
+    width:170px;
+    height:564px;
+    border-right:1px solid #ff0716;
+    border-top:1px solid transparent;
+}
+.wrap .w-left ul{
+    width:100%;
+}
+.wrap .w-left ul li{
+    width:150px;
+    height:40px;
+    margin:10px auto;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    background: rgba(237, 237, 237, 0.38);
+    text-align: center;
+    line-height:40px;
+    font-weight:bold;
+    font-family: 宋体;
+    color: #161616;
+    cursor: pointer;
+}
+.wrap .w-left ul li:hover{
+    background: rgba(178,178,178,.8);
+    color: #fff;
+}
+.wrap .w-left ul li.on{
+    background: rgba(178,178,178,.8);
+    color: #fff;
+}
+
+.w-center{
+    width:350px;
+    height:100%;
+    border-right:1px solid #ff0716;
+}
+.w-c-top{
+    width:100%;
+    height:290px;
+    font-family:楷体;
+}
+.w-c-top .t-img{
+    width:100%;
+    height:200px;
+    border-top:1px solid transparent;
+}
+.w-c-top .t-img .mr{
+    width:180px;
+    height:180px;
+    line-height:176px;
+    text-align: center;
+    margin:9px auto;
+    border:2px solid #000000;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+    background:rgba(237, 237, 237, 0.38);
+}
+.w-c-top .t-img .mr img{
+    vertical-align: middle;
+    /*width:160px;*/
+    height:160px;
+    line-height: 160px;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
+/*歌词图片的动画*/
+@keyframes rotate {
+    from{ transform: rotateZ(0deg)}
+    to{ transform: rotateZ(720deg)}
+}
+.t-center{
+    height:24px;
+    padding:0 0 3px ;
+    font-size:18px;
+    text-align: center;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.w-c-top h3{
+    margin-top:10px;
+    font-size:22px;
+    text-align: center;
+}
+.w-c-bottom{
+    width:100%;
+    height:275px;
+    overflow: hidden;
+    margin-left: calc(25.6vw - 100%);
+}
+.w-c-bottom ul{
+    width:100%;
+    height:100%;
+    /*margin:0 auto;*/
+    border-top:1px solid transparent;
+    overflow: auto;
+}
+.w-c-bottom ul li{
+    float: left;
+    width:140px;
+    height:30px;
+    margin:5px 13px;
+    line-height:30px;
+    text-align:center;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    background: rgba(237, 237, 237, 0.38);
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    cursor: pointer;
+}
+.wrap .w-center ul li:hover{
+    background: rgba(178,178,178,.8);
+    color: #ff0b23;
+}
+.wrap .w-center ul li.on{
+    background: rgba(178,178,178,.8);
+    color: #ff0b23;
+}
+.w-right{
+    width:578px;
+    height:100%;
+}
+.w-right .w-r-card{
+    position: relative;
+    /*width:400px;*/
+    width:100%;
+    height:500px;
+    margin:0 auto;
+    padding:24px 0;
+    line-height:40px;
+    font-family:楷体;
+    text-align: center;
+    overflow: hidden;
+}
+.w-right .w-r-card ul{
+    position:relative;
+    top:250px;
+    width:400px;
+    margin:0 auto;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.w-right .w-r-card ul li.oncolor{
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.sc{
+    color: #ff0b23;
+    transform: scale(1.2);
+}
+.w-right .w-r-bg{
+    position: absolute;
+    top:47px;
+    width:578px;
+    height:565px;
+    z-index: 111;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0.8), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.8) , rgba(255,255,2550,1)); /* Safari 5.1 - 6 */
+    background: -o-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0.8), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.8) , rgba(255,255,2550,1)); /* Opera 11.1 - 12*/
+    background: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0.8), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.8) , rgba(255,255,2550,1)); /* Firefox 3.6 - 15*/
+    background:  linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0.8), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.8) , rgba(255,255,2550,1)); /* 标准的语法 */
+}
+
+/*底部控制部分*/
+#footer{
+    width:1000px;
+    height:47px;
+    line-height:47px;
+    margin:0 auto;
+}
+.f-left{
+    width:190px;
+    /*margin:0 auto;*/
+    text-align: center;
+    cursor: pointer;
+}
+.f-left .f-fontsize{
+    font-size:40px;
+    margin:0 5px;
+}
+/*进度条*/
+.f-center{
+    height:47px;
+    line-height:47px;
+}
+.bar{
+    width:400px;
+}
+.b-ing{
+    width:0px;
+    left:12px;
+}
+/*进度条和音量调节的公共部分*/
+.bv{
+    height:10px;
+    margin:19px 5px 0;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    background: #000;
+}
+.bv-ing{
+    position: relative;
+    height:10px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #fff;
+}
+.dot{
+    position: absolute;
+    right:0;
+    top:-4px;
+    width:16px;
+    height:16px;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+    background: #fff;
+    cursor: pointer;
+}
+/*音量调节*/
+.v-span{
+    float: left;
+    display: inline-block;
+    width:12px;
+    height:10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: #fff;
+}
+.vol{
+    width:150px;
+}
+.vol .v-ing{
+    /*width:138px;*/
+    width:75px;
+    left:12px;
+}
+.f-right .fr-fontsize{
+    font-size:25px;
+    cursor: pointer;
+}
