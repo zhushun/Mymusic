@@ -366,25 +366,16 @@
     function eFn(e,objbar,objUL,size,bi){
         e=e||window.event;
         var numb=e.wheelDelta/120||-e.detail/3 ; //判断滚轮的方向和滚动一次的大小
-       // console.log(gunHeight);
-        numb>0?pop+=5:pop-=5;
+        numb>0?pop-=5:pop+=5;
         if(pop<0){
-            // console.log("pop<0");
-            // console.log(pop);
             pop=0;
         }else if(pop>size){
-            // console.log("pop>size");
-            // console.log(pop);
             pop=size;
         }
         if(pop>=0 && pop<=size){
             objbar.style.top=pop+"px";
             objUL.style.top=-(pop*bi)+"px";
         }
-        // console.log("左边");
-        // console.log("pop="+pop);
-        // // console.log(biL);
-        // // console.log(gunHeight);
     }
     //调用滚动事件
     // mouseWheel(wrSreach,eFn);
