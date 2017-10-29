@@ -146,21 +146,42 @@
     text-align: center;
 }
 .w-c-bottom{
+    position: relative;
     width:100%;
     height:275px;
     overflow: hidden;
-    margin-left: calc(25.6vw - 100%);
+    /*margin-left: calc(25.6vw - 100%);*/
 }
-.w-c-bottom ul{
-    width:100%;
+.w-c-bottom .w-c-gdtiao{
+    position: absolute;
+    top:0;
+    right:0;
+    width:8px;
     height:100%;
+    background: rgba(8, 7, 13, 0.38);
+}
+.w-c-bottom .w-c-gdtiao .w-c-gdbar{
+    position: absolute;
+    top:0;
+    right:0;
+    width:8px;
+    background: rgba(13, 1, 1, 0.38);
+}
+
+
+.w-c-bottom ul{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    /*height:100%;*/
     /*margin:0 auto;*/
     border-top:1px solid transparent;
-    overflow: auto;
+    overflow: hidden;
 }
 .w-c-bottom ul li{
     float: left;
-    width:140px;
+    width:146px;
     height:30px;
     margin:5px 13px;
     line-height:30px;

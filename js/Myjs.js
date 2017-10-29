@@ -62,6 +62,29 @@
         numb,//li元素的序列号
         musicid=204363498;
 
+
+    var pop=0;//bar的变化量
+    // 左侧滚动条
+    var sizeL=0;
+    var biL=0;
+    var wcGDtiao=document.querySelector(".w-c-gdtiao");
+    var wcGDbar=document.querySelector(".w-c-gdbar");
+    var wcBottom=document.querySelector(".w-c-bottom");
+    //var musicList=$musicList;
+    // 左侧滚动条信息
+    function leftGUNdongtiao(){
+        var MLheight= $musicList.height();
+        console.log("MLheight="+MLheight);
+        wcGDbar.style.height=275/MLheight*275+"px";
+        var barHeight=parseFloat( wcGDbar.style.height);//获取滚动点的高度
+        console.log(barHeight);
+
+        sizeL=275-barHeight;
+        console.log(sizeL);
+        biL=(MLheight-275)/sizeL;
+    }
+
+
     $audio[0].volume=0.5;//设置初始音量的大小
     //获取歌曲地址
     function getURL(songlist){
@@ -90,6 +113,8 @@
             $musicList.append(li);
         });
         songList(songlist);
+
+        leftGUNdongtiao();//左侧滚动条
     }
 //点击哪个歌曲就给哪个歌曲添加class和播放该该歌曲
     function songList(songlist) {
@@ -331,6 +356,45 @@
             }
         },60/1000);
     }
+
+
+ //滚动条事件(兼容谷歌和火狐IE)
+    function mouseWheel(obj,Fn) {
+        document.onmousewheel===null ? obj.onmousewheel=Fn :obj.addEventListener("DOMMouseScroll",Fn);
+    }
+    //滚动的处理事件
+    function eFn(e,objbar,objUL,size,bi){
+        e=e||window.event;
+        var numb=e.wheelDelta/120||-e.detail/3 ; //判断滚轮的方向和滚动一次的大小
+       // console.log(gunHeight);
+        numb>0?pop+=5:pop-=5;
+        if(pop<0){
+            // console.log("pop<0");
+            // console.log(pop);
+            pop=0;
+        }else if(pop>size){
+            // console.log("pop>size");
+            // console.log(pop);
+            pop=size;
+        }
+        if(pop>=0 && pop<=size){
+            objbar.style.top=pop+"px";
+            objUL.style.top=-(pop*bi)+"px";
+        }
+        // console.log("左边");
+        // console.log("pop="+pop);
+        // // console.log(biL);
+        // // console.log(gunHeight);
+    }
+    //调用滚动事件
+    // mouseWheel(wrSreach,eFn);
+    mouseWheel(wcBottom,function(e){
+        // return eFn(e,wcGDbar,$musicList[0],sizeL,biL,popL);
+        return eFn(e,wcGDbar,$musicList[0],sizeL,biL);
+    });
+
+
+
 //获取数据
     getData(Topid);
     function getData(Topid){
