@@ -281,8 +281,8 @@
     width:400px;
 }
 .b-ing{
-    width:0px;
-    left:12px;
+    width:0;
+    left:0;
 }
 /*进度条和音量调节的公共部分*/
 .bv{
